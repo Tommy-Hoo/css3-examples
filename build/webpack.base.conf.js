@@ -81,6 +81,11 @@ module.exports = {
                   return '</div></demo-block>\n';
                 }
               }
+            }],
+            [require('markdown-it-container'), 'doc', {
+              validate: function (params) {
+                return params.trim().match(/^doc\s+(.*)$/);
+              }
             }]
             ]
           }

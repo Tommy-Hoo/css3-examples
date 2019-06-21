@@ -16,6 +16,9 @@
       <div class="main--left">
         <ul>
           <li>
+            <router-link to="/intro">CSS3 介绍</router-link>
+          </li>
+          <li>
             <router-link to="/test">test 组件</router-link>
           </li>
           <li>
