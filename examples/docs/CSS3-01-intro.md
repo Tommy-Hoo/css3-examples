@@ -14,7 +14,6 @@ selector {property: value;}
 
 ![Alt text](https://waylau.gitbooks.io/css3-tutorial/content/images/selector.jpg "The Stormtroopocat")
 
-
 ## 引入方式
 ### 三种方式将样式表加入您的网页：
 

@@ -6,9 +6,9 @@
         <img src="./assets/logo.png"
           alt="logo">
       </div>
-      <div class="main-header-title">CSS3</div>
+      <div class="main-header-title">CSS3 基础知识</div>
       <ul class="main-header-nav">
-        <li class="active">组件</li>
+        <li class="active">CSS3</li>
       </ul>
     </div>
 
@@ -19,11 +19,32 @@
             <router-link to="/intro">CSS3 介绍</router-link>
           </li>
           <li>
-            <router-link to="/test">test 组件</router-link>
+            <router-link to="/border">Border 边框</router-link>
           </li>
           <li>
-            <router-link to="/button">button 组件</router-link>
+            <router-link to="/background">Background 背景</router-link>
           </li>
+          <li>
+            <router-link to="/gradient">Gradient 渐变色</router-link>
+          </li>
+          <li>
+            <router-link to="/textures">Textures 文本</router-link>
+          </li>
+          <li>
+            <router-link to="/fonts">Fonts 字体</router-link>
+          </li>
+          <li>
+            <router-link to="/transform">Transform 变换</router-link>
+          </li>
+          <li>
+            <router-link to="/transition">Transition 过渡</router-link>
+          </li>
+          <li>
+            <router-link to="/animation">Animation 动画</router-link>
+          </li>
+          <!-- <li>
+            <router-link to="/button">button 组件</router-link>
+          </li> -->
         </ul>
       </div>
       <div class="main--right">
@@ -50,9 +71,9 @@ body {
   font-family: Microsoft YaHei;
 }
 .router-link-active {
-  color: #41a259 !important;
-  background-color: #eeffde !important;
-  border-right: 3px solid #41a259 !important;
+  color: #1758a7 !important;
+  background-color: #d6eeff !important;
+  border-right: 3px solid #1758a7 !important;
 }
 #app {
   overflow: hidden;
@@ -68,6 +89,11 @@ body {
   z-index: 10;
   height: 65px;
   color: #444;
+
+  position: fixed;
+    left: 0;
+    right: 0;
+    background: white;
 }
 #app .main-header .main-header-logo {
   height: 100%;
@@ -118,12 +144,12 @@ body {
     border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 #app .main-header .main-header-nav li.active {
-  color: #41a259;
-  border-bottom: 3px solid #41a259;
+  color: #1758a7;
+  border-bottom: 3px solid #1758a7;
 }
 #app .main- {
   position: relative;
-  padding: 40px 0 0;
+  padding: 60px 0 0;
   margin-left: 0;
   margin-right: 0;
   height: auto;
@@ -137,6 +163,12 @@ body {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+      position: fixed;
+    background: white;
+    left: 0;
+    top: 65px;
+    bottom: 0;
+    border-right: 1px solid #e8e8e8;
 }
 #app .main- .main--left ul {
   width: 250px;
@@ -165,10 +197,10 @@ body {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   font-weight: 700;
-  border-right: 1px solid #e8e8e8;
+  //border-right: 1px solid #e8e8e8;
 }
 #app .main- .main--left ul li a:hover {
-  color: #41a259;
+  color: #1758a7;
 }
 #app .main- .main--left ul li.main--link-group {
   height: auto;
@@ -189,16 +221,17 @@ body {
   font-weight: 400;
 }
 #app .main- .main--left ul li.main--link-group ul a:hover {
-  color: #41a259;
+  color: #1758a7;
   cursor: pointer;
 }
 #app .main- .main--right {
-  padding: 0 84px 140px 64px;
+  padding: 20px  84px 140px 280px;
+  
   min-height: 500px;
   overflow: hidden;
 }
 #app .main- .main--right a {
-  color: #41a259;
+  color: #1758a7;
   text-decoration: none;
 }
 .markdown h1 {
@@ -214,9 +247,9 @@ body {
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  font-family: Lato;
+  //font-family: Lato;
   margin: 1.6em 0 0.6em;
-  font-weight: 500;
+  font-weight: bold;
   clear: both;
 }
 .markdown h3 {
@@ -233,9 +266,8 @@ body {
 }
 .markdown p,
 .markdown pre {
-  font-size: 14px;
-  color: #5e6d82;
-  line-height: 1.5em;
+  color: #121519;
+  font: 500 16px / 1.5em microsoft yahei, helvetica;
 }
 .markdown ul > li > p,
 .markdown ol > li > p {
@@ -257,7 +289,7 @@ body {
   padding-left: 4px;
   padding-top: 15px;
 }
-.markdown > table {
+.markdown table {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
@@ -265,14 +297,14 @@ body {
   width: 100%;
   margin: 8px 0 16px;
 }
-.markdown > table th,
-.markdown > table td {
+.markdown table th,
+.markdown table td {
   color: #314659;
   border: 1px solid #ebedf0;
   text-align: left;
   padding: 10px 15px;
 }
-.markdown > table th {
+.markdown table th {
   white-space: nowrap;
   color: #5c6b77;
   font-weight: 500;
@@ -314,6 +346,14 @@ body {
   background: #ebedf0;
   clear: both;
 }
+.markdown{
+  pre{
+    code{
+      width: 100%;
+      display: inline-block;
+    }
+  }
+}
 .markdown code {
   font-family: Microsoft YaHei;
   margin: 0 1px;
@@ -323,4 +363,6 @@ body {
   font-size: 0.9em;
   border: 1px solid #eee;
 }
+
+
 </style>
